@@ -55,7 +55,7 @@ function voltearCarta(carta) {
       reveladas = [];
       if (aciertos === cartas.length) {
         // 🎉 Victoria con estrella gigante
-        document.body.innerHTML = `<div id="estrellaVictoria">⭐</div>`;
+        document.body.innerHTML = `<div id="estrellaVictoria">❤️</div>`;
         return;
       }
     } else {
