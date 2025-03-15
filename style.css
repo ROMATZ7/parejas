@@ -1,0 +1,93 @@
+body {
+  background: #1a1a1a;
+  color: #f0f0f0;
+  font-family: 'Segoe UI', sans-serif;
+  text-align: center;
+  padding: 20px;
+}
+
+h1 {
+  color: gold;
+}
+
+/* Instrucciones */
+#instrucciones {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#instrucciones ul {
+  font-size: 18px;
+  line-height: 1.8;
+}
+
+#empezar, #reiniciar {
+  margin-top: 30px;
+  padding: 12px 24px;
+  font-size: 18px;
+  background-color: goldenrod;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+#empezar:hover, #reiniciar:hover {
+  background-color: orange;
+}
+
+/* Juego */
+#tablero {
+  display: grid;
+  grid-template-columns: repeat(4, 80px);
+  grid-gap: 10px;
+  justify-content: center;
+  margin: 20px auto;
+}
+
+.carta {
+  width: 80px;
+  height: 80px;
+  background: #444;
+  font-size: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border-radius: 10px;
+  transition: background 0.3s;
+}
+
+.carta.revelada {
+  background: #222;
+}
+
+#vidas {
+  font-size: 20px;
+  margin: 10px 0;
+}
+
+#mensaje {
+  font-size: 22px;
+  margin-top: 20px;
+  font-weight: bold;
+}
+
+/* 🌟 Pantalla de estrella gigante */
+#estrellaVictoria {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 25vw;
+  height: 100vh;
+  background-color: #111;
+  color: gold;
+  animation: brillar 1s infinite alternate;
+}
+
+@keyframes brillar {
+  from { transform: scale(1); opacity: 0.8; }
+  to { transform: scale(1.1); opacity: 1; }
+}
